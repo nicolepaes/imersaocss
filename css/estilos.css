@@ -6,7 +6,7 @@
 }
 body {
     background: #f9d5bb;
-    font-family: arial;
+    font-family: 'Source Code Pro', monospace;
     font-size: 10px;
   }
 
@@ -27,8 +27,6 @@ body {
   @media (min-width: 1200px) {
     body {
       font-size: 20px;
-      background-image: none;
-      background-color: tomato;
     }
   }
   header {
@@ -75,13 +73,67 @@ body {
   
   .site-title {
     font-size: 4em;
+    font-family: 'Merienda', cursive;
   }
 
   .site-subtitle {
     font-style: italic;
+    font-family: 'Audiowide', cursive;
   } 
+
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+  .portfolio h2 {
+    font-family: 'Audiowide', cursive;
+    color: teal;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 48px - 8em);
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
   
+  .IFES { 
+    height: 200px;
+    width: 140px;
+  }
+
+  .Behance {
+    height: 200px;
+    width: 200px;
+  }
+
   .img-portfolio {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10%;
+  }
+
+  .portfolio img:hover {
+    transform: scale(1.13);
   }
