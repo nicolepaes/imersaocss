@@ -41,6 +41,7 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
   
   .menu ul {
@@ -56,6 +57,9 @@ body {
   padding: 10px 20px;
   }
   
+  .menu a:hover {
+
+  }
   a {
     color: teal; 
     text-decoration: none;
@@ -65,6 +69,24 @@ body {
     text-decoration: underline;
   }
   
+  .titulos {
+   transform: scale(0.2) translateY(50vh);
+   opacity: 0;
+
+   animation: linear 2s animacaoTitulo forwards;
+  }
+
+@keyframes animacaoTitulo {
+  0% {
+    transform: scale(0.2) translateY(50vh);
+   opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
   .site-subtitle,
   .site-title { 
     color: teal;
@@ -72,22 +94,22 @@ body {
   }
   
   .site-title {
-    font-size: 4em;
-    font-family: 'Merienda', cursive;
+    font-size: 3em;
+    font-family: 'Hind', sans-serif;
   }
 
   .site-subtitle {
     font-style: italic;
-    font-family: 'Audiowide', cursive;
+    font-family: 'Roboto', sans-serif;
   } 
-
+.contato,
   .portfolio {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
 }
-
+.contato h2,
   .portfolio h2 {
-    font-family: 'Audiowide', cursive;
+    font-family: 'Roboto', sans-serif;
     color: teal;
     margin-bottom: 1.5em;
     font-size: 2em;
@@ -120,11 +142,13 @@ body {
   .IFES { 
     height: 200px;
     width: 140px;
+    transition: transform 500ms;
   }
 
   .Behance {
     height: 200px;
     width: 200px;
+    transition: transform 500ms;
   }
 
   .img-portfolio {
@@ -132,8 +156,25 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 10%;
+    transition: transform 500ms;
   }
 
   .portfolio img:hover {
     transform: scale(1.13);
+  }
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: teal;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 15px rgb(176, 218, 247, 0.8);
   }
